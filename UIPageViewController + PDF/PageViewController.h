@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSMutableArray *modelArray;
 @property (nonatomic, assign) NSInteger currentIndex;
 @property (nonatomic, assign) NSInteger totalPages;
+@property (nonatomic, unsafe_unretained) CGPDFDocumentRef PDFDocument;
 
 - (void)configureWithPDFAtPath:(NSString *)path;
 

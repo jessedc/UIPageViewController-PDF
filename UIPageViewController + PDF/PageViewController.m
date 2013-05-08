@@ -8,7 +8,6 @@
 #import "PageViewController.h"
 
 @interface PageViewController ()
-@property (nonatomic, unsafe_unretained) CGPDFDocumentRef PDFDocument;
 @end
 
 @implementation PageViewController
@@ -78,7 +77,7 @@
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
-    return 0;
+    return self.currentIndex;
 }
 
 
