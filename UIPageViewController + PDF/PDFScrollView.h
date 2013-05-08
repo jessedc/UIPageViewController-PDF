@@ -51,6 +51,8 @@
 
 @interface PDFScrollView : UIScrollView <UIScrollViewDelegate> 
 
+@property (nonatomic, assign) BOOL drawPDFActualSize;
+
 - (void)setPDFPage:(CGPDFPageRef)PDFPage;
 
 @end

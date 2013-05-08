@@ -5,21 +5,13 @@
 //  Copyright (c) 2012 Jack Humphries. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
-#import "PDFScrollView.h"
-
 @class PDFScrollView;
 
-@interface ContentViewController : UIViewController <UIScrollViewDelegate> {
-    
-    CGPDFDocumentRef thePDF;
-    PDFScrollView *pdfScrollView;
-    
-}
+@interface ContentViewController : UIViewController <UIScrollViewDelegate>
 
--(id)initWithPDF:(CGPDFDocumentRef)pdf;
+@property (nonatomic, strong) NSNumber *page;
+@property (nonatomic, unsafe_unretained) CGPDFDocumentRef thePDF;
 
-@property (nonatomic, strong) NSString *page;
+- (void)configureWithPDF:(CGPDFDocumentRef)pdf;
 
 @end

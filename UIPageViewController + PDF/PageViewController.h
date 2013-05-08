@@ -5,23 +5,18 @@
 //  Copyright (c) 2012 Jack Humphries. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "ContentViewController.h"
 #import "ViewController.h"
 
 @class ContentViewController, UIPrintInteractionController;
 
-@interface PageViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
-    
-    UIPageViewController *thePageViewController;
-    ContentViewController *contentViewController;
-    NSMutableArray *modelArray;
-    CGPDFDocumentRef PDFDocument;
-    int currentIndex;
-    int totalPages;
-    
-}
+@interface PageViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
--(id)initWithPDFAtPath:(NSString *)path;
+@property (nonatomic, strong) UIPageViewController *thePageViewController;
+@property (nonatomic, strong) NSMutableArray *modelArray;
+@property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, assign) NSInteger totalPages;
+
+- (void)configureWithPDFAtPath:(NSString *)path;
 
 @end
