@@ -70,16 +70,6 @@
     return contentViewController;
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-    return self.totalPages;
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return self.currentIndex;
-}
-
 
 #pragma mark - UIPageViewControllerDelegate Methods
 
