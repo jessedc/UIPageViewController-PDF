@@ -32,10 +32,4 @@
     [self.view addSubview:scrollView];
 }
 
--(void)dealloc {
-    if (self.thePDF) {
-        CFRelease(self.thePDF);
-    }
-}
-
 @end
